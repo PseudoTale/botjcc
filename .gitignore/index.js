@@ -141,7 +141,12 @@ bot.on('message', async message => {
 		}
 	
 	})
-
+<script>
+  function clickHandler() {
+     alert("Hello, World!");
+  }
+</script>
+<span onclick="clickHandler();">Cliquer ici</span>
 
 
 
