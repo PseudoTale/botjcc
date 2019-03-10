@@ -1,7 +1,6 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const token = process.env.TOKEN;
-let args = message.content.trim().split(/ +/g)
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 };
@@ -14,6 +13,7 @@ bot.on('ready', () => {
 
 
 bot.on('message', async message => {
+	let args = message.content.trim().split(/ +/g)
 	
 	if (message.content === '.ping') {
 		console.log(`Commande .ping par ${message.author.tag}`);
