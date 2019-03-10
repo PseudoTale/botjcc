@@ -141,12 +141,16 @@ bot.on('message', async message => {
 		}
 	
 			if(message.content === '.PseudoTale') {
-			console.log(`Commande .gif par ${message.author.tag}`)
+			console.log(`Commande .PseudoTale par ${message.author.tag}`)
 			return message.channel.send("https://www.youtube.com/channel/UCUspavUwM6UFeFRxmwVHiwA")
 			}
 	
 	})
-
+			if(message.content === '.Pewds') {
+			console.log(`Commande .Pewds par ${message.author.tag}`)
+			return message.channel.send("Abbonez vous a PewDiePie !!!!!!!!!!!!!!!! https://www.youtube.com/user/PewDiePie")
+			}
+	
 
 
 
