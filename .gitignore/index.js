@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const token = process.env.TOKEN;
+let args = message.content.trim().split(/ +/g)
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 };
@@ -100,7 +101,7 @@ bot.on('message', async message => {
 			return message.channel.send('```Les commandes sont: \n 1: .ping \n .pong \n .pierre \n .feuille \n .ciseau \n .pile \n .face \n .avatar \n Et d\'autres nouveautés vont arriver ! N\'ésites pas a laisser des suggestions !```')
   	}
 
-		if(message.content.includes === '.avatar') {
+		if (args[0].toLocaleLowerCase() === ".avatar") {
 			console.log(`Commande .avatar par ${message.author.tag}`);
 			let member = message.mentions.users.first()
 			if(!member) return message.channel.send(message.author.avatarURL)
