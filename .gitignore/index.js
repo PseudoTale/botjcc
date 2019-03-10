@@ -102,7 +102,9 @@ bot.on('message', async message => {
 
 		if(message.content === '.avatar') {
 			console.log(`Commande .avatar par ${message.author.tag}`);
-			return message.channel.send('Votre avatar: ' + message.author.displayAvatarURL)
+			let member = message.mentions.users.first()
+			if(!member) return message.channel.send(message.author.avatarURL)
+			message.channel.send(member.displayAvatarURL)
 		
 		}
 
@@ -136,8 +138,8 @@ bot.on('message', async message => {
 			return message.channel.send("Cette command est en cours de dévellopement !")
 			//return message.channel.send("https://tenor.com/view/peace-and-tranquility-no-one-is-around-to-help-hat-kid-ahat-in-time-dancing-gif-12688052")
 		}
-
-})
+	
+	})
 
 
 
