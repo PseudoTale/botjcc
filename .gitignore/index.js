@@ -98,7 +98,7 @@ bot.on('message', async message => {
 		
   	if(message.content === '.jcc') {
 			console.log(`Commande .help par ${message.author.tag}`);
-			return message.channel.send('```Les commandes sont: \n 1: .ping \n .pong \n .pierre \n .feuille \n .ciseau \n .pile \n .face \n .avatar \n Et d\'autres nouveautés vont arriver ! N\'ésites pas a laisser des suggestions !```')
+			return message.channel.send('```Les commandes sont: \n 1: .ping \n .pong \n .pierre \n .feuille \n .ciseau \n .pile \n .face \n .avatar \n .PseudoTale \n .Pewds \n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !```')
   	}
 
 		if (args[0].toLocaleLowerCase() === ".avatar") {
@@ -143,6 +143,11 @@ bot.on('message', async message => {
 			if(message.content === '.PseudoTale') {
 			console.log(`Commande .gif par ${message.author.tag}`)
 			return message.channel.send("https://www.youtube.com/channel/UCUspavUwM6UFeFRxmwVHiwA")
+			}
+	
+			if(message.content === '.Pewds') {
+			console.log(`Commande .Pewds par ${message.author.tag}`)
+			return message.channel.send("Abbonez vous a PewDiePie !!!!!!!!!!!!!!!! https://www.youtube.com/user/PewDiePie")
 			}
 	
 	})
