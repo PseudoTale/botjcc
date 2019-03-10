@@ -141,6 +141,10 @@ bot.on('message', async message => {
 		}
 	
 	})
+		if(message.content === '.PseudoTale') {
+			console.log(`Commande .gif par ${message.author.tag}`)
+			return message.channel.send("https://www.youtube.com/channel/UCUspavUwM6UFeFRxmwVHiwA")
+			
 
 
 
