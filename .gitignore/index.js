@@ -141,15 +141,5 @@ bot.on('message', async message => {
 
 
 
-bot.on('message', function (message) {
-	
-	if(Google.match(message)) {
-		Google.action(message)
-		
-	}
-
-})
-
-
 
 bot.login(token)
