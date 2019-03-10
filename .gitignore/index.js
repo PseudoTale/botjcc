@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-const Google = require('google')
 const token = process.env.TOKEN;
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -138,7 +137,12 @@ bot.on('message', async message => {
 			//return message.channel.send("https://tenor.com/view/peace-and-tranquility-no-one-is-around-to-help-hat-kid-ahat-in-time-dancing-gif-12688052")
 		}
 
-		
+	if(message.content === '.google') {
+		console.log(`commande .google par ${message.author.tag}`)
+		let args = message.content.split(' ')
+		args.shift()
+		return message.channel.send('https://www.google.fr/#q=' + args.join('%20'))
+	}
 
 })
 
