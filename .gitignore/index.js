@@ -8,7 +8,6 @@ function getRandomInt(max) {
 
 bot.on('ready', () => {
 	console.log('Bot prêt');
-	bot.user.setGame(".jcc = help");
 })
 
 
