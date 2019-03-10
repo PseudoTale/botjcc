@@ -110,9 +110,8 @@ bot.on('message', async message => {
 		}
 
     if (message.content.startsWith(".kick")) {
-			console.log(`Commande .kick par ${message.author.tag}`)
-			if(message.member.hasPermission("ADMINISTRATOR")) {
-				message.delete(100);
+	console.log(`Commande .kick par ${message.author.tag}`)
+	if(message.member.hasPermission("ADMINISTRATOR")) {
         var member= message.mentions.members.first();
         member.kick().then((member) => {
 					return message.channel.send(member.displayName + " a bien était kick");
@@ -122,16 +121,15 @@ bot.on('message', async message => {
 			}
 		}
     if (message.content.startsWith(".ban")) {
-			console.log(`Commande .ban par ${message.author.tag}`)
-			if(message.member.hasPermission("ADMINISTRATOR")) {
-				message.delete(100);
+	console.log(`Commande .ban par ${message.author.tag}`)
+	if(message.member.hasPermission("ADMINISTRATOR")) {
         var member= message.mentions.members.first();
         member.ban().then((member) => {
-					return message.channel.send(member.displayName + " a bien était ban");
+		return message.channel.send(member.displayName + " a bien était ban");
         });
-			} else {
-				return message.channel.send("Tu n'a pas les permissions pour ban quelqu'un")
-			}
+	} else {
+		return message.channel.send("Tu n'a pas les permissions pour ban quelqu'un")
+		}
 		}		
 
 		if(message.content === '.gif') {
