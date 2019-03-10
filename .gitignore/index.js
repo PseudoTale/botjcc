@@ -150,7 +150,7 @@ bot.on('message', async message => {
 			}
 	
 				if(args[0].toLocaleLowerCase() === '.clear'){
-				if(!message.member.hasPermission('MANAGE_MESSAGE')) return message.channel.send("Vous n'avez pas la permission requis")
+				if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("Vous n'avez pas la permission requis")
 				let count = args[1]
 				if(!count) return message.channel.send("Veuillez indiquer un nombre de message à supprimer")
 				if(isNaN(count)) message.channel.send("Veuillez indiquer un nombre valide")
