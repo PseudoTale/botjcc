@@ -140,6 +140,11 @@ bot.on('message', async message => {
 			//return message.channel.send("https://tenor.com/view/peace-and-tranquility-no-one-is-around-to-help-hat-kid-ahat-in-time-dancing-gif-12688052")
 		}
 	
+			if(message.content === '.PseudoTale') {
+			console.log(`Commande .gif par ${message.author.tag}`)
+			return message.channel.send("https://www.youtube.com/channel/UCUspavUwM6UFeFRxmwVHiwA")
+			}
+	
 	})
 
 
