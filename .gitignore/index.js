@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const Google = require('./commands/google')
-const token = process.env.TOKEN
+const token = process.env.TOKEN;
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 };
