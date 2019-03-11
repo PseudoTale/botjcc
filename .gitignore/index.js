@@ -197,7 +197,10 @@ bot.on('message', async message => {
 			message.channel.send(embed)
 	}
 	
-	})
+		if(message.content === 'UWU') {
+			console.log(`Commande .Pewds par ${message.author.tag}`)
+			return message.channel.send("MONSTRE DU DEMON")
+	}
 
 
 
