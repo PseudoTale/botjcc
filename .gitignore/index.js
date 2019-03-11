@@ -185,7 +185,7 @@ bot.on('message', async message => {
 	
 	    if (args[0].toLocaleLowerCase() === '.question'){
 			if (!args[0]) return message.channel.send("Veuillez **poser une question**")
-			let rep = ["Non :x:", "J'ai envie de dormir :zzz:", "Balec :face_palm:", "Peut être... :thinking:", "Absolument :interrobang:"];
+			let rep = ["Non :x:", "J'ai envie de dormir :zzz:", "Balec :face_palm:", "Peut être... :thinking:", "Évidemment"];
 			let reptaille = Math.floor((Math.random() * rep.length));
 			let question = args.slice(0).join(" ");
 
