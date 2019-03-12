@@ -196,6 +196,9 @@ bot.on('message', async message => {
 					.addField("Réponse:", rep[reptaille]);
 			message.channel.send(embed)
 	}
+		if(message.content === '.zizi') {
+			console.log(`Commande .zizi par ${message.author.tag}`)
+			return message.channel.send("https://www.youtube.com/watch?v=vjTQqTGa3dQ :eggplant:")
 	
 	})
 
