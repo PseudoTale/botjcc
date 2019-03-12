@@ -197,6 +197,14 @@ bot.on('message', async message => {
 			message.channel.send(embed)
 	}
 	
+		if(message.content === '.zizi') {
+		message.delete()
+		console.log(`Commande .zizi par ${message.author.tag}`)
+		return message.channel.send("https://www.youtube.com/watch?v=vjTQqTGa3dQ :eggplant:")
+		}	
+
+	})
+	
 	})
 
 
