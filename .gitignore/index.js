@@ -203,9 +203,8 @@ bot.on('message', async message => {
 		return message.channel.send("https://www.youtube.com/watch?v=vjTQqTGa3dQ :eggplant:")
 		}	
 
-	})
 	
-	})
+	});
 
 
 
