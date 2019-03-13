@@ -103,6 +103,7 @@ bot.on('message', async message => {
 			.setColor('#00B131')
 			.addField("Les commandes sont: \n\n .ping/.ping \n\n .pierre/.feuille/.ciseau \n\n .pile/.face \n\n .avatar \n\n .PseudoTale		.Pewds \n\n .zizi \n\n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
 		message.channel.sendEmbed(help_embed)
+	}
 
 		if (args[0].toLocaleLowerCase() === ".avatar") {
 			console.log(`Commande .avatar par ${message.author.tag}`);
@@ -205,7 +206,7 @@ bot.on('message', async message => {
 		}	
 
 	
-	})
+	});
 
 
 
