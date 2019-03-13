@@ -97,10 +97,12 @@ bot.on('message', async message => {
 
 		}
 		
-  	if(message.content === '.jcc') {
-			console.log(`Commande .help par ${message.author.tag}`);
-			return message.channel.send('```Les commandes sont: \n 1: .ping \n .pong \n .pierre \n .feuille \n .ciseau \n .pile \n .face \n .avatar \n .PseudoTale \n .Pewds \n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !```')
-  	}
+ 	if(message.content === '.jcc') {
+		console.log(`Commande .help par ${message.author.tag}`);
+		var help_embed = new Discord.RichEmbed()
+			.setColor('#00B131')
+			.addField("Les commandes sont: \n\n .ping/.ping \n\n .pierre/.feuille/.ciseau \n\n .pile/.face \n\n .avatar \n\n .PseudoTale		.Pewds \n\n .zizi \n\n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
+		message.channel.sendEmbed(help_embed)
 
 		if (args[0].toLocaleLowerCase() === ".avatar") {
 			console.log(`Commande .avatar par ${message.author.tag}`);
