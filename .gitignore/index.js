@@ -12,11 +12,11 @@ bot.on('ready', () => {
 })
 
 bot.on('guildMemberAdd', member =>{
-	member.guild.channels.get('555109037168132116').send('***Bienvenue*** '+ member.user + ' sur le serveur !! Nous sommes donc ' + member.guild.memberCount);
+	member.guild.channels.get('534753705400991774').send('***Bienvenue*** '+ member.user + ' sur le serveur !! Nous sommes donc ' + member.guild.memberCount);
 })
 
 bot.on('guildMemberRemove', member =>{
-	member.guild.channels.get('555109037168132116').send(member.user + " est partis :sob: :sob: Nous sommes donc " + member.guild.memberCount);
+	member.guild.channels.get('534753705400991774').send(member.user + " est partis :sob: :sob: Nous sommes donc " + member.guild.memberCount);
 })
 
 
