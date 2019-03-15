@@ -47,6 +47,18 @@ bot.on('message', async message => {
 		var resultat = 'ciseau';
 		return message.channel.send("```Votre choix: pierre\nmon choix: ciseau\n\nVous avez donc gagné```")
     }
+	  if(message.content === '.puits') {
+		console.log(`Commande .pierre par ${message.author.tag}`);
+	  var resultat = getRandomInt(3);
+		if(resultat === 0) {
+		var resultat = 'pierre';
+		return message.channel.send("```Votre choix: puits\n mon choix: pierre\n\nVous avez donc gagné```")
+	} else if(resultat = 1) {
+		var resultat = 'feuille';
+		return message.channel.send("```Votre choix: puits\nmon choix: feuille\n\nVous avez donc gagné```")
+    } else {
+		var resultat = 'ciseau';
+		return message.channel.send("```Votre choix: puits\nmon choix: ciseau\n\nVous avez donc gagné```")
 
 	}
 
