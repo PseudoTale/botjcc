@@ -89,13 +89,13 @@ bot.on('message', async message => {
 	  var resultat = getRandomInt(3);
 		if(resultat === 0) {
 		var resultat = 'pierre';
-		return message.channel.send("```Votre choix: *censured*\n mon choix: pierre\n\nVous avez donc gagné```")
+		return message.channel.send("```Votre choix: censured\n mon choix: pierre\n\nVous avez donc gagné```")
 	} else if(resultat = 1) {
 		var resultat = 'feuille';
-		return message.channel.send("```Votre choix: *censured*\nmon choix: feuille\n\nVous avez donc gagné```")
+		return message.channel.send("```Votre choix: censured\nmon choix: feuille\n\nVous avez donc gagné```")
     	} else {
 		var resultat = 'ciseau';
-		return message.channel.send("```Votre choix: *censured*\nmon choix: ciseau\n\nVous avez donc gagné```")
+		return message.channel.send("```Votre choix: censured\nmon choix: ciseau\n\nVous avez donc gagné```")
 
 	}
 	 
