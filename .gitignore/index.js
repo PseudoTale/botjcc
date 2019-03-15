@@ -48,7 +48,7 @@ bot.on('message', async message => {
 		return message.channel.send("```Votre choix: pierre\nmon choix: ciseau\n\nVous avez donc gagné```")
     }
 
-	
+	}
 
 	
   if(message.content === '.feuille') {
@@ -80,21 +80,6 @@ bot.on('message', async message => {
 			var resultat = 'ciseau';
 			return message.channel.send("```Votre choix: ciseau\nmon choix: ciseau\n\nC'est une égalité```")
 	}
-
-	}
-	
- if(message.content === '.puits') {
-	 message.delete()
-	  var resultat = getRandomInt(3);
-		if(resultat === 0) {
-		var resultat = 'pierre';
-		return message.channel.send("```Votre choix: *censured*\n mon choix: pierre\n\nVous avez donc gagné```")
-	} else if(resultat = 1) {
-		var resultat = 'feuille';
-		return message.channel.send("```Votre choix: *censured*\nmon choix: feuille\n\nVous avez donc gagné```")
-    	} else {
-		var resultat = 'ciseau';
-		return message.channel.send("```Votre choix: *censured*\nmon choix: ciseau\n\nVous avez donc gagné```")
 
 	}
 
@@ -231,6 +216,59 @@ bot.on('message', async message => {
 	if(message.content === '.hatkid') {
 		message.channel.send("https://tenor.com/view/furry-ahat-in-time-games-dance-gif-13636284")	
 	}
+	const Discord = require('discord.js');
+exports.run = (client, message, args, guild) => {
+    let reason = args.slice(1).join(' ');
+    let user = message.mentions.users.first();
+    let modlog = client.channels.find('name', 'delet-this');
+    if (!modlog) return message.reply('I cannot find a mod-log channel!')
+    if (reason.length < 1) return message.reply('you must supply a reason for the warning.');
+    if (message.mentions.users.size < 1) return message.reply('you must mention a user to warn.').catch(console.error);
+    client.channels.get(modlog.id).send({embed: {
+        color: 16381497,
+        author: {
+        name: `⚠️ Warning issued to ${user.username}#${user.discriminator} (${user.id})`,
+        icon_url: user.avatarURL
+        },
+        title: "",
+        url: "",
+        description: `\`\`\`js\nReason: ${reason}\nResponsible moderator: ${message.author.tag} (${message.author.id})\`\`\``,
+        // fields: [{
+        //     name: "Fields",
+        //     value: "They can have different fields with small headlines."
+        // },
+        // {
+        //     name: "Masked links",
+        //     value: "You can put [masked links](http://google.com) inside of rich embeds."
+        // },
+        // {
+        //     name: "Markdown",
+        //     value: "You can put all the *usual* **__Markdown__** inside of them."
+        // }
+        // ],
+        timestamp: new Date(),
+        footer: {
+        //icon_url: client.user.avatarURL,
+        text: "Warnings are not currently tracked"
+        }
+    }
+});
+message.channel.send(':ok_hand:');
+user.send(`⚠️ You were warned in ${message.guild.name} for the reason "${reason}". Please ensure you follow all rules that apply to you in the server/guild as being warned multiple times can lead to you being banned or kicked.`);
+};
+
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: 2
+};
+
+exports.help = {
+    name: 'warn',
+    description: 'Issues a warning to the mentioned user.',
+    usage: 'warn [user] [reason]'
+};
 
 	
 	});
