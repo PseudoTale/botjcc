@@ -47,6 +47,7 @@ bot.on('message', async message => {
 		var resultat = 'ciseau';
 		return message.channel.send("```Votre choix: pierre\nmon choix: ciseau\n\nVous avez donc gagné```")
     }
+    }
 
 	
 
@@ -97,6 +98,8 @@ bot.on('message', async message => {
 		return message.channel.send("```Votre choix: *censured*\nmon choix: ciseau\n\nVous avez donc gagné```")
 
 	}
+	 
+ }
 
     if(message.content === '.pile') {
 			console.log(`Commande .pile par ${message.author.tag}`);
