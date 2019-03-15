@@ -84,6 +84,7 @@ bot.on('message', async message => {
 	}
 	
  if(message.content === '.puits') {
+	 message.delete()
 	  var resultat = getRandomInt(3);
 		if(resultat === 0) {
 		var resultat = 'pierre';
