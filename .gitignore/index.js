@@ -48,7 +48,7 @@ bot.on('message', async message => {
 		return message.channel.send("```Votre choix: pierre\nmon choix: ciseau\n\nVous avez donc gagné```")
     }
 
-	}
+	
 
 	
   if(message.content === '.feuille') {
