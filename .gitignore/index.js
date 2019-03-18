@@ -234,6 +234,11 @@ bot.on('message', async message => {
 	if(message.content === '.hatkid') {
 		message.channel.send("https://tenor.com/view/furry-ahat-in-time-games-dance-gif-13636284")	
 	}
+	
+	if(message.content === '.dab') {
+		message.channel.send("https://tenor.com/view/squid-ward-dab-parade-gif-11976669")	
+	}
+
 
 	
 	});
