@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const token = process.env.TOKEN;
+var crea = '@AżЄЯρŧĪφρ#0768';
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 };
@@ -141,25 +142,33 @@ bot.on('message', async message => {
 
     if (message.content.startsWith(".kick")) {
 	console.log(`Commande .kick par ${message.author.tag}`)
-	if(message.member.hasPermission("ADMINISTRATOR")) {
-        var member= message.mentions.members.first();
-        member.kick().then((member) => {
-					return message.channel.send(member.displayName + " a bien était kick");
+	if(message.mentions.users.first() !== crea) {
+		if(message.member.hasPermission("ADMINISTRATOR")) {
+        	var member= message.mentions.members.first();
+        	member.kick().then((member) => {
+			return message.channel.send(member.displayName + " a bien était kick");
         });
-			} else {
-				message.channel.send("Tu n'a pas les permissions pour kick quelqu'un")
+		} else {
+			message.channel.send("Tu n'a pas les permissions pour kick quelqu'un")
 			}
+	} else {
+		message.channel.send("Ses mon maitre.. Je ne veut pas le kick")
+	}
 		}
     if (message.content.startsWith(".ban")) {
 	console.log(`Commande .ban par ${message.author.tag}`)
-	if(message.member.hasPermission("ADMINISTRATOR")) {
-        var member= message.mentions.members.first();
-        member.ban().then((member) => {
-		return message.channel.send(member.displayName + " a bien était ban");
+	if(message.mentions.users.first() !== crea) {
+		if(message.member.hasPermission("ADMINISTRATOR")) {
+        	var member= message.mentions.members.first();
+        	member.ban().then((member) => {
+			return message.channel.send(member.displayName + " a bien était ban");
         });
 	} else {
 		return message.channel.send("Tu n'a pas les permissions pour ban quelqu'un")
 		}
+	} else {
+		message.channel.send("Ses mon maitre.. Je ne veut pas le ban")	
+	}
 		}		
 
 		if(message.content === '.gif') {
@@ -189,7 +198,9 @@ bot.on('message', async message => {
 			}
 
 	if (args[0].toLowerCase() === ".mute") {
+		
         	if (!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.send("Vous n'avez pas la permission d'utiliser cette commande")
+		if(message.mentions.users.first() !== crea) {
         	let member = message.mentions.members.first()
         	if (!member) return message.channel.send("Membre introuvable")
         	if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.ownerID) return message.channel.send("Vous ne pouvez pas mute ce membre")
@@ -210,7 +221,10 @@ bot.on('message', async message => {
                 message.channel.send(member + ' a été mute :white_check_mark:')
             })
         }
+    } else {
+	message.channel.send('Ses mon maitre.. Je ne veut pas le mute')    
     }
+	}
 	
 	    if (args[0].toLocaleLowerCase() === '.question'){
 			if (!args[0]) return message.channel.send("Veuillez **poser une question**")
