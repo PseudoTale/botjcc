@@ -8,7 +8,7 @@ function getRandomInt(max) {
 
 
 bot.on('ready', () => {
-	bot.user.setActivity('vous aidez ! (.jcc)')
+	botUser#setActivity('vous aidez ! (.jcc)')
 	console.log('Bot prêt');
 })
 
