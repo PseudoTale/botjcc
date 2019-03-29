@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const token = process.env.TOKEN;
-var crea = '@AżЄЯρŧĪφρ#0768';
+var crea = '@AżЄЯρŧĪφρ';
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 };
