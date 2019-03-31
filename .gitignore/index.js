@@ -27,7 +27,8 @@ var cat = ["https://cdn.discordapp.com/attachments/465850774845390859/5618614375
 	"https://cdn.discordapp.com/attachments/465850774845390859/561862590184292352/https3A2F2Fstatic.png",
 	"https://cdn.discordapp.com/attachments/465850774845390859/561862691296378890/https3A2F2Fimages.png",
 	"https://cdn.discordapp.com/attachments/465850774845390859/561862784724369408/http3A2F2Fwww.png",
-	"https://cdn.discordapp.com/attachments/465850774845390859/561862867146768384/http3A2F2Fcdn-doctissimo.png",];
+	"https://cdn.discordapp.com/attachments/465850774845390859/561862867146768384/http3A2F2Fcdn-doctissimo.png",
+	"https://cdn.discordapp.com/attachments/467816100181311519/561893598916771863/IMG_20190323_215059_306.jpg",];
 
 
 bot.on('ready', () => {
