@@ -17,6 +17,18 @@ var dab = ["https://tenor.com/view/squid-ward-dab-parade-gif-11976669",
 	"https://tenor.com/view/gendut-lucu-dab-sledding-sledding-juga-nih-gif-12174790",
 	"https://tenor.com/view/dab-lords-pupsuck-dabbing-gif-8108584",];
 
+var cat = ["https://cdn.discordapp.com/attachments/465850774845390859/561861437522313226/th.png",
+	"https://cdn.discordapp.com/attachments/465850774845390859/561861726132371469/https3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/465850774845390859/561861966956855296/jsxzobk8.png",
+	"https://cdn.discordapp.com/attachments/465850774845390859/561862139820769281/https3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/465850774845390859/561862244095229982/https3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/465850774845390859/561862368347553793/http3A2F2Fcoxilanddu26.png",
+	"https://cdn.discordapp.com/attachments/465850774845390859/561862456771739658/https3A2F2Frecherche.png",
+	"https://cdn.discordapp.com/attachments/465850774845390859/561862590184292352/https3A2F2Fstatic.png",
+	"https://cdn.discordapp.com/attachments/465850774845390859/561862691296378890/https3A2F2Fimages.png",
+	"https://cdn.discordapp.com/attachments/465850774845390859/561862784724369408/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/465850774845390859/561862867146768384/http3A2F2Fcdn-doctissimo.png",];
+
 
 bot.on('ready', () => {
 	bot.user.setGame('vous aidez ! (.jcc)')
@@ -139,7 +151,7 @@ bot.on('message', async message => {
 		console.log(`Commande .help par ${message.author.tag}`);
 		var help_embed = new Discord.RichEmbed()
 			.setColor('#00B131')
-			.addField("Les commandes sont: \n\n .ping/.ping		.dab \n\n .pierre/.feuille/.ciseau \n\n .pile/.face \n\n .avatar \n\n .PseudoTale		.Pewds		.Destroyer \n\n .zizi		.hatkid \n\n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
+			.addField("Les commandes sont: \n\n .ping/.ping		.dab/ .cat \n\n .pierre/.feuille/.ciseau \n\n .pile/.face \n\n .avatar \n\n .PseudoTale		.Pewds		.Destroyer \n\n .zizi		.hatkid \n\n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
 		message.channel.sendEmbed(help_embed)
 	}
 
@@ -266,6 +278,10 @@ bot.on('message', async message => {
 	
 	if(message.content === '.dab') {
 		message.channel.send(dab[getRandomInt(dab.length)])	
+	}
+	
+	if(message.content === '.cat') {
+		message.channel.send(cat[getRandomInt(cat.length)])	
 	}
 	
 	});
