@@ -151,7 +151,10 @@ bot.on('message', async message => {
 		console.log(`Commande .help par ${message.author.tag}`);
 		var help_embed = new Discord.RichEmbed()
 			.setColor('#00B131')
-			.addField("Les commandes sont: \n\n .ping /.ping		.dab / .cat \n\n .pierre / .feuille / .ciseau \n\n .pile / .face \n\n .avatar \n\n .PseudoTale		.Pewds		.Destroyer \n\n .zizi		.hatkid \n\n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
+			.setDescription("Les commandes sont:")
+			.addField(".ping /.ping		.dab / .cat \n\n .pierre / .feuille / .ciseau \n\n .pile / .face \n\n .avatar \n\n .PseudoTale		.Pewds		.Destroyer \n\n .zizi		.hatkid		.hymnejcc")
+			.setFooter("Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
+			.setTitle("Voici le panneau d'aide")
 		message.channel.sendEmbed(help_embed)
 	}
 
@@ -282,6 +285,10 @@ bot.on('message', async message => {
 	
 	if(message.content === '.cat') {
 		message.channel.send(cat[getRandomInt(cat.length)])	
+	}
+	
+	if(message.content === '.hymnejcc') {
+		message.content.send("Voila l'hymne national de la jcc (aussi de l'URSS) https://www.youtube.com/watch?v=Rm6q_3WGy9M")
 	}
 	
 	});
