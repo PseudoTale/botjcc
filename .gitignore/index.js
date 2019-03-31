@@ -6,6 +6,17 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 };
 
+var dab = ["https://tenor.com/view/squid-ward-dab-parade-gif-11976669",
+	"https://tenor.com/view/dab-dancing-idgaf-gif-5661979",
+	"https://tenor.com/view/luigi-dab-gif-9672617",
+	"https://tenor.com/view/dab-pogba-bad-pogba-gif-7345779",
+	"https://tenor.com/view/shark-dab-gif-10027244",
+	"https://tenor.com/view/dab-dance-hit-or-miss-nyan-cosplay-tik-tok-gif-12988318",
+	"https://tenor.com/view/markiplier-dab-dabbing-gif-8063187",
+	"https://tenor.com/view/bettywhite-dab-gif-5044603",
+	"https://tenor.com/view/gendut-lucu-dab-sledding-sledding-juga-nih-gif-12174790",
+	"https://tenor.com/view/dab-lords-pupsuck-dabbing-gif-8108584",];
+
 
 bot.on('ready', () => {
 	bot.user.setGame('vous aidez ! (.jcc)')
@@ -254,7 +265,7 @@ bot.on('message', async message => {
 	}
 	
 	if(message.content === '.dab') {
-		message.channel.send("https://tenor.com/view/squid-ward-dab-parade-gif-11976669")	
+		message.channel.send(dab[getRandomInt(dab.length)])	
 	}
 	
 	});
