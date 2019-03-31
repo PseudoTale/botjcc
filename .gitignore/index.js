@@ -128,7 +128,7 @@ bot.on('message', async message => {
 		console.log(`Commande .help par ${message.author.tag}`);
 		var help_embed = new Discord.RichEmbed()
 			.setColor('#00B131')
-			.addField("Les commandes sont: \n\n .ping/.ping \n\n .pierre/.feuille/.ciseau \n\n .pile/.face \n\n .avatar \n\n .PseudoTale		.Pewds \n\n .zizi		.hatkid \n\n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
+			.addField("Les commandes sont: \n\n .ping/.ping \n\n .pierre/.feuille/.ciseau \n\n .pile/.face \n\n .avatar \n\n .PseudoTale		.Pewds		.Destroyer \n\n .zizi		.hatkid \n\n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
 		message.channel.sendEmbed(help_embed)
 	}
 
@@ -249,6 +249,9 @@ bot.on('message', async message => {
 		message.channel.send("https://tenor.com/view/furry-ahat-in-time-games-dance-gif-13636284")	
 	}
 
+	if(message.content === '.Destroyer') {
+		message.channel.send("Ah oui ses le boss de enderbot !")
+	}
 	
 	});
 
