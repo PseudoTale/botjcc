@@ -31,7 +31,7 @@ var cat = ["https://cdn.discordapp.com/attachments/465850774845390859/5618614375
 
 
 bot.on('ready', () => {
-	bot.user.setGame('vous aidez ! (.jcc)')
+	bot.user.setGame('vous aidez ! (.help)')
 	console.log('Bot prêt');
 })
 
@@ -147,11 +147,11 @@ bot.on('message', async message => {
 
 		}
 		
- 	if(message.content === '.jcc') {
+ 	if(message.content === '.help') {
 		console.log(`Commande .help par ${message.author.tag}`);
 		var help_embed = new Discord.RichEmbed()
 			.setColor('#00B131')
-			.addField("Les commandes sont: \n\n .ping/.ping		.dab/ .cat \n\n .pierre/.feuille/.ciseau \n\n .pile/.face \n\n .avatar \n\n .PseudoTale		.Pewds		.Destroyer \n\n .zizi		.hatkid \n\n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
+			.addField("Les commandes sont: \n\n .ping /.ping		.dab / .cat \n\n .pierre / .feuille / .ciseau \n\n .pile / .face \n\n .avatar \n\n .PseudoTale		.Pewds		.Destroyer \n\n .zizi		.hatkid \n\n Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
 		message.channel.sendEmbed(help_embed)
 	}
 
