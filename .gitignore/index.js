@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const token = process.env.TOKEN;
+const secret = process.env.SECRET
 var crea = '@AżЄЯρŧĪφρ';
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -133,7 +134,7 @@ bot.on('message', async message => {
 
 	}
 	
- if(message.content === '.puits') {
+ if(message.content === secret) {
 	 message.delete()
 	  var resultat = getRandomInt(3);
 		if(resultat === 0) {
@@ -177,7 +178,7 @@ bot.on('message', async message => {
 		var help_embed = new Discord.RichEmbed()
 			.setColor('#00B131')
 			.setDescription("Les commandes sont:")
-			.addField(".ping /.ping		.dab / .cat / .bouffe \n\n .pierre / .feuille / .ciseau \n\n .pile / .face \n\n .avatar \n\n .PseudoTale		.Pewds		.Destroyer \n\n .zizi		.hatkid		.hymnejcc")
+			.addField(".ping /.ping		.dab / .cat / .bouffe / .stop \n\n .pierre / .feuille / .ciseau \n\n .pile / .face \n\n .avatar \n\n .PseudoTale		.Pewds		.Destroyer \n\n .zizi		.hatkid		.hymnejcc")
 			.setFooter("Et d\'autres nouveautés vont arriver !N\'ésites pas a laisser des suggestions !")
 			.setTitle("Voici le panneau d'aide")
 		message.channel.sendEmbed(help_embed)
