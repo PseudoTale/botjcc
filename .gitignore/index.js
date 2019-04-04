@@ -49,6 +49,12 @@ var bouffe = ["https://cdn.discordapp.com/attachments/541611576021614622/5633470
 	"https://cdn.discordapp.com/attachments/541611576021614622/563349380535549982/http3A2F2Fwww.png",
 	"https://cdn.discordapp.com/attachments/541611576021614622/563349503927779328/http3A2F2Fwww.png"];
 
+var stop = ["https://tenor.com/view/filthyfrank-gif-5228178",
+	    "https://tenor.com/view/stop-christina-aguilera-gif-4456583",
+	    "https://tenor.com/view/daddys-home2-daddys-home2gifs-stop-it-stop-that-imean-it-gif-9694318",
+	    "https://tenor.com/view/stop-stopit-mj-jordan-nope-gif-5098905",
+	    "https://tenor.com/view/stop-batman-gif-5565522"];
+
 bot.on('ready', () => {
 	bot.user.setGame('vous aidez ! (.help)')
 	console.log('Bot prêt');
@@ -312,6 +318,10 @@ bot.on('message', async message => {
 	
 	if(message.content === '.bouffe') {
 		message.channel.send(bouffe[getRandomInt(cat.length)])
+	}
+	
+	if(message.content === '.stop') {
+		message.channel.send(stop[getRandomInt(stop.length)])
 	}
 	
 	});
