@@ -30,6 +30,24 @@ var cat = ["https://cdn.discordapp.com/attachments/465850774845390859/5618614375
 	"https://cdn.discordapp.com/attachments/465850774845390859/561862867146768384/http3A2F2Fcdn-doctissimo.png",
 	"https://cdn.discordapp.com/attachments/467816100181311519/561893598916771863/IMG_20190323_215059_306.jpg",];
 
+var bouffe = ["https://cdn.discordapp.com/attachments/541611576021614622/563347016802107393/http3A2F2Fstorage-cube.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563347177456533504/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563347328300351488/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563347421741187075/https3A2F2Fimg3.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563347530692296704/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563347626389536768/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563347715799515147/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563347823584608257/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563348018468749342/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563348123141799949/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563348230700531722/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563348655944499214/https3A2F2Fdata.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563348735124307978/https3A2F2Ftheloserswhomadeit.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563348947700285461/http3A2F2F2.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563349111433330688/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563349196887949340/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563349380535549982/http3A2F2Fwww.png",
+	"https://cdn.discordapp.com/attachments/541611576021614622/563349503927779328/http3A2F2Fwww.png"];
 
 bot.on('ready', () => {
 	bot.user.setGame('vous aidez ! (.help)')
@@ -290,6 +308,10 @@ bot.on('message', async message => {
 	
 	if(message.content === '.hymnejcc') {
 		message.content.send("Voila l'hymne national de la jcc (aussi de l'URSS) https://www.youtube.com/watch?v=Rm6q_3WGy9M")
+	}
+	
+	if(message.content === '.bouffe') {
+		message.channel.send(bouffe[getRandomInt(cat.length)])
 	}
 	
 	});
