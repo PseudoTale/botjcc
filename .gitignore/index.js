@@ -104,7 +104,7 @@ bot.on('message', async message => {
 					.setFooter('Commande .pierre')
 					message.channel.sendEmbed(pierre_embed)
 
-		} else if(resultat = 1) {
+		} else if(resultat === 1) {
 			var resultat = 'feuille';
 
 			var pierre_embed = new Discord.RichEmbed()
@@ -142,7 +142,7 @@ bot.on('message', async message => {
 					message.channel.sendEmbed(feuille_embed)
 
 
-			} else if(resultat = 1) {
+			} else if(resultat === 1) {
 				var resultat = 'feuille';
 
 				var feuille_embed = new Discord.RichEmbed()
@@ -177,7 +177,7 @@ bot.on('message', async message => {
 				.setFooter("Commande .ciseau")
 				message.channel.sendEmbed(ciseau_embed)
 
-		} else if(resultat = 1) {
+		} else if(resultat === 1) {
 			var resultat = 'feuille';
 
 			var ciseau_embed = new Discord.RichEmbed()
