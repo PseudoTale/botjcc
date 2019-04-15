@@ -78,7 +78,7 @@ bot.on('message', async message => {
 		console.log(`Commande .ping par ${message.author.tag}`);
 		var ping_embed = new Discord.RichEmbed()
 			.setColor('#0E37EA')
-			.setTitle('pong')
+			.setTitle('Pong !     La latence avec le bot est de ' +  + `${Date.now() - message.createdTimestamp}` + ' ms')
 			.setFooter("Commande .ping")
 			message.channel.sendEmbed(ping_embed)
 	}
