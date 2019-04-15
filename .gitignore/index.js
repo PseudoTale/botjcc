@@ -72,10 +72,12 @@ bot.on('guildMemberRemove', member =>{
 
 
 bot.on('message', async message => {
+	const channel = message.guild.channels.find(ch => ch.name === 'z');
 	let args = message.content.trim().split(/ +/g)
-				
 	if (message.content === '.ping') {
-		console.log(`Commande .ping par ${message.author.tag}`);
+
+	
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		var ping_embed = new Discord.RichEmbed()
 			.setColor('#0E37EA')
 			.setTitle('Pong !     La latence avec le bot est de ' +  + `${Date.now() - message.createdTimestamp}` + ' ms')
@@ -84,7 +86,7 @@ bot.on('message', async message => {
 	}
 			
 		 if (message.content === '.pong') {
-			console.log(`Commande .pong par ${message.author.tag}`);
+			channel.send(message.author + " à éfféctuer la commande " + message.content);
 			var pong_embed = new Discord.RichEmbed()
 				.setColor('#2D355B')
 				.setTitle('ping')
@@ -93,7 +95,7 @@ bot.on('message', async message => {
 	}
 			
 	if(message.content === '.pierre') {
-		console.log(`Commande .pierre par ${message.author.tag}`);
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		var resultat = getRandomInt(3);
 		if(resultat === 0) {
 			var resultat = 'pierre';
@@ -130,7 +132,7 @@ bot.on('message', async message => {
 			
 				
 	if(message.content === '.feuille') {
-		console.log(`Commande .feuille par ${message.author.tag}`);
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		var resultat = getRandomInt(3);
 			if(resultat === 0) {
 				var resultat = 'pierre';
@@ -166,7 +168,7 @@ bot.on('message', async message => {
 				}
 			
 	if(message.content === '.ciseau') {
-		console.log(`Commande .ciseau par ${message.author.tag}`);
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		var resultat = getRandomInt(3);
 		if(resultat === 0) {
 			var resultat = 'pierre';
@@ -211,7 +213,7 @@ bot.on('message', async message => {
 					.setFooter("Commande secrète")
 					message.channel.sendEmbed(puits_embed)
 
-				} else if(resultat = 1) {
+				} else if(resultat === 1) {
 					var resultat = 'feuille';
 
 					var puits_embed = new Discord.RichEmbed()
@@ -234,6 +236,7 @@ bot.on('message', async message => {
 			 }
 			
 	if(message.content === '.pile') {
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		console.log(`Commande .pile par ${message.author.tag}`);
 		var pile_face = getRandomInt(2);
 		if(pile_face === 0) {
@@ -257,7 +260,8 @@ bot.on('message', async message => {
 	}
 			
 	if(message.content === '.face') {
-		console.log(`Commande .face par ${message.author.tag}`);
+
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		var pile_face = getRandomInt(2);
 			if(pile_face === 1) {
 
@@ -280,7 +284,7 @@ bot.on('message', async message => {
 		}
 					
 	if(message.content === '.help') {
-		console.log(`Commande .help par ${message.author.tag}`);
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		var help_embed = new Discord.RichEmbed()
 			.setColor('#00B131')
 			.setDescription("Les commandes sont:")
@@ -291,7 +295,7 @@ bot.on('message', async message => {
 	}
 			
 	if (args[0].toLocaleLowerCase() === ".avatar") {
-		console.log(`Commande .avatar par ${message.author.tag}`);
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		let member = message.mentions.users.first()
 						
 		if(!member) {
@@ -314,7 +318,7 @@ bot.on('message', async message => {
 	}
 			
 	if (message.content.startsWith(".kick")) {
-		console.log(`Commande .kick par ${message.author.tag}`)
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 			if(message.mentions.users.first() !== crea) {
 				if(message.member.hasPermission("ADMINISTRATOR")) {
 						var member= message.mentions.members.first();
@@ -330,7 +334,7 @@ bot.on('message', async message => {
 					}
 
 	if (message.content.startsWith(".ban")) {
-		console.log(`Commande .ban par ${message.author.tag}`)
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		if(message.mentions.users.first() !== crea) {
 			if(message.member.hasPermission("ADMINISTRATOR")) {
 				var member= message.mentions.members.first();
@@ -346,22 +350,23 @@ bot.on('message', async message => {
 	}		
 			
 	if(message.content === '.gif') {
-		console.log(`Commande .gif par ${message.author.tag}`)
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		return message.channel.send("Cette command est en cours de dévellopement !")
 		//return message.channel.send("https://tenor.com/view/peace-and-tranquility-no-one-is-around-to-help-hat-kid-ahat-in-time-dancing-gif-12688052")
 	}
 				
 	if(message.content === '.PseudoTale') {
-		console.log(`Commande .gif par ${message.author.tag}`)
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		return message.channel.send("https://www.youtube.com/channel/UCUspavUwM6UFeFRxmwVHiwA")
 	}
 				
 	if(message.content === '.Pewds') {
-		console.log(`Commande .Pewds par ${message.author.tag}`)
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		return message.channel.send("Abbonez vous a PewDiePie !!!!!!!!!!!!!!!! https://www.youtube.com/user/PewDiePie")
 	}
 				
 	if(args[0].toLocaleLowerCase() === '.clear'){
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("Vous n'avez pas la permission requis")
 		let count = args[1]
 		if(!count) return message.channel.send("Veuillez indiquer un nombre de message à supprimer")
@@ -372,7 +377,7 @@ bot.on('message', async message => {
 						}
 			
 	if (args[0].toLowerCase() === ".mute") {
-					
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		if (!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.send("Vous n'avez pas la permission d'utiliser cette commande")
 		if(message.mentions.users.first() !== crea) {
 			let member = message.mentions.members.first()
@@ -401,6 +406,7 @@ bot.on('message', async message => {
 				}
 				
 	if (args[0].toLocaleLowerCase() === '.question'){
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		if (!args[0]) return message.channel.send("Veuillez **poser une question**")
 		let rep = ["Non :x:", "J'ai envie de dormir :zzz:", "Balec :face_palm:", "Peut être... :thinking:", "Évidemment"];
 		let reptaille = Math.floor((Math.random() * rep.length));
@@ -415,14 +421,17 @@ bot.on('message', async message => {
 				}
 				
 	if(message.content === '.zizi') {
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		message.channel.send("https://www.youtube.com/watch?v=vjTQqTGa3dQ :eggplant:")
 	}
 				
 	if(message.content === '.hatkid') {
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		message.channel.send("https://tenor.com/view/furry-ahat-in-time-games-dance-gif-13636284")	
 	}
 			
 	if(message.content === '.Destroyer') {
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		let Destroyer_embed = new Discord.RichEmbed()
 			.setColor('#c763c4')
 			.setTitle("Ah oui ces le boss de enderbot !")
@@ -430,27 +439,33 @@ bot.on('message', async message => {
 		message.channel.sendEmbed(Destroyer_embed)
 
 				}
+
 				
+// les gifs
 	if(message.content === '.dab') {
-					message.channel.send(dab[getRandomInt(dab.length)])	
-				}
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
+		message.channel.send(dab[getRandomInt(dab.length)])	
+	}
 				
 	if(message.content === '.cat') {
-					message.channel.send(cat[getRandomInt(cat.length)])	
-				}
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
+		message.channel.send(cat[getRandomInt(cat.length)])	
+	}
 				
 	if(message.content === '.hymnejcc') {
-					message.content.send("Voila l'hymne national de la jcc (aussi de l'URSS) https://www.youtube.com/watch?v=Rm6q_3WGy9M")
-				}
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
+		message.content.send("Voila l'hymne national de la jcc (aussi de l'URSS) https://www.youtube.com/watch?v=Rm6q_3WGy9M")
+	}
 				
 	if(message.content === '.bouffe') {
-					message.channel.send(bouffe[getRandomInt(bouffe.length)])
-				}
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
+		message.channel.send(bouffe[getRandomInt(bouffe.length)])
+	}
 				
 	if(message.content === '.stop') {
-					message.channel.send(stop[getRandomInt(stop.length)])
-				}
-				
+		channel.send(message.author + " à éfféctuer la commande " + message.content);
+		message.channel.send(stop[getRandomInt(stop.length)])
+	}
 				});
 
 
