@@ -72,7 +72,7 @@ bot.on('guildMemberRemove', member =>{
 
 
 bot.on('message', async message => {
-	const channel = message.guild.channels.find(ch => ch.name === 'z');
+	const channel = message.guild.channels.find(ch => ch.name === 'log-jcc-bot');
 	let args = message.content.trim().split(/ +/g)
 	if (message.content === '.ping') {
 
