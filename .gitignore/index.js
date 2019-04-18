@@ -76,8 +76,6 @@ bot.on('message', async message => {
 	let args = message.content.trim().split(/ +/g)
 	if (message.content === '.ping') {
 
-	
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		var ping_embed = new Discord.RichEmbed()
 			.setColor('#0E37EA')
 			.setTitle('Pong !     La latence avec le bot est de ' +  + `${Date.now() - message.createdTimestamp}` + ' ms')
@@ -86,7 +84,7 @@ bot.on('message', async message => {
 	}
 			
 		 if (message.content === '.pong') {
-			channel.send(message.author + " à éfféctuer la commande " + message.content);
+
 			var pong_embed = new Discord.RichEmbed()
 				.setColor('#2D355B')
 				.setTitle('ping')
@@ -95,7 +93,7 @@ bot.on('message', async message => {
 	}
 			
 	if(message.content === '.pierre') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
+
 		var resultat = getRandomInt(3);
 		if(resultat === 0) {
 			var resultat = 'pierre';
@@ -132,7 +130,7 @@ bot.on('message', async message => {
 			
 				
 	if(message.content === '.feuille') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
+
 		var resultat = getRandomInt(3);
 			if(resultat === 0) {
 				var resultat = 'pierre';
@@ -167,8 +165,8 @@ bot.on('message', async message => {
 			
 				}
 			
+
 	if(message.content === '.ciseau') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		var resultat = getRandomInt(3);
 		if(resultat === 0) {
 			var resultat = 'pierre';
@@ -236,7 +234,6 @@ bot.on('message', async message => {
 			 }
 			
 	if(message.content === '.pile') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		console.log(`Commande .pile par ${message.author.tag}`);
 		var pile_face = getRandomInt(2);
 		if(pile_face === 0) {
@@ -261,7 +258,6 @@ bot.on('message', async message => {
 			
 	if(message.content === '.face') {
 
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		var pile_face = getRandomInt(2);
 			if(pile_face === 1) {
 
@@ -284,7 +280,6 @@ bot.on('message', async message => {
 		}
 					
 	if(message.content === '.help') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		var help_embed = new Discord.RichEmbed()
 			.setColor('#00B131')
 			.setDescription("Les commandes sont:")
@@ -295,7 +290,6 @@ bot.on('message', async message => {
 	}
 			
 	if (args[0].toLocaleLowerCase() === ".avatar") {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		let member = message.mentions.users.first()
 						
 		if(!member) {
@@ -350,18 +344,17 @@ bot.on('message', async message => {
 	}		
 			
 	if(message.content === '.gif') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
+
 		return message.channel.send("Cette command est en cours de dévellopement !")
 		//return message.channel.send("https://tenor.com/view/peace-and-tranquility-no-one-is-around-to-help-hat-kid-ahat-in-time-dancing-gif-12688052")
 	}
 				
 	if(message.content === '.PseudoTale') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
+
 		return message.channel.send("https://www.youtube.com/channel/UCUspavUwM6UFeFRxmwVHiwA")
 	}
 				
 	if(message.content === '.Pewds') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		return message.channel.send("Abbonez vous a PewDiePie !!!!!!!!!!!!!!!! https://www.youtube.com/user/PewDiePie")
 	}
 				
@@ -406,7 +399,6 @@ bot.on('message', async message => {
 				}
 				
 	if (args[0].toLocaleLowerCase() === '.question'){
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		if (!args[0]) return message.channel.send("Veuillez **poser une question**")
 		let rep = ["Non :x:", "J'ai envie de dormir :zzz:", "Balec :face_palm:", "Peut être... :thinking:", "Évidemment"];
 		let reptaille = Math.floor((Math.random() * rep.length));
@@ -421,17 +413,14 @@ bot.on('message', async message => {
 				}
 				
 	if(message.content === '.zizi') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		message.channel.send("https://www.youtube.com/watch?v=vjTQqTGa3dQ :eggplant:")
 	}
 				
 	if(message.content === '.hatkid') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		message.channel.send("https://tenor.com/view/furry-ahat-in-time-games-dance-gif-13636284")	
 	}
 			
 	if(message.content === '.Destroyer') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		let Destroyer_embed = new Discord.RichEmbed()
 			.setColor('#c763c4')
 			.setTitle("Ah oui ces le boss de enderbot !")
@@ -443,27 +432,22 @@ bot.on('message', async message => {
 				
 // les gifs
 	if(message.content === '.dab') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		message.channel.send(dab[getRandomInt(dab.length)])	
 	}
 				
 	if(message.content === '.cat') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		message.channel.send(cat[getRandomInt(cat.length)])	
 	}
 				
 	if(message.content === '.hymnejcc') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		message.content.send("Voila l'hymne national de la jcc (aussi de l'URSS) https://www.youtube.com/watch?v=Rm6q_3WGy9M")
 	}
 				
 	if(message.content === '.bouffe') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		message.channel.send(bouffe[getRandomInt(bouffe.length)])
 	}
 				
 	if(message.content === '.stop') {
-		channel.send(message.author + " à éfféctuer la commande " + message.content);
 		message.channel.send(stop[getRandomInt(stop.length)])
 	}
 				});
