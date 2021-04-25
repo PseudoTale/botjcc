@@ -136,7 +136,7 @@ bot.on('message', async message => {
 
 		if(message.content === '.gif') {
 			console.log(`Commande .gif par ${message.author.tag}`)
-			return message.channel.send("Cette command est en cours de dévellopement !")
+			return message.channel.send("OWO")
 			//return message.channel.send("https://tenor.com/view/peace-and-tranquility-no-one-is-around-to-help-hat-kid-ahat-in-time-dancing-gif-12688052")
 		}
 	
